@@ -14,9 +14,11 @@
   "license": "ISC",
   "packageManager": "pnpm@10.7.1",
   "dependencies": {
+    "dat.gui": "^0.7.9",
     "three": "^0.179.1"
   },
   "devDependencies": {
+    "@types/dat.gui": "^0.7.13",
     "@types/three": "^0.179.0",
     "typescript": "^5.9.2",
     "vite": "^7.1.2",

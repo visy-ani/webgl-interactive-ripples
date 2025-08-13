@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive WebGL Ripples</title>
+    <title>Enhanced Interactive WebGL Ripples</title>
+    <meta
+      name="description"
+      content="Interactive ripple effect with customizable colors and physics"
+    />
   </head>
   <body>
     <div id="app">
@@ -11,6 +15,19 @@
       <div class="overlay">
         <h1>Interactive Ripple Effect</h1>
         <p>Click anywhere to create ripples</p>
+        <div class="stats">
+          <div class="stat">
+            <span class="label">FPS:</span>
+            <span id="fps-counter">60</span>
+          </div>
+          <div class="stat">
+            <span class="label">Ripples:</span>
+            <span id="ripple-counter">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="controls-hint">
+        <p>Press 'C' to toggle controls • 'R' to clear ripples</p>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>

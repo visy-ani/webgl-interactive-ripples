@@ -8,10 +8,16 @@ importers:
 
   .:
     dependencies:
+      dat.gui:
+        specifier: ^0.7.9
+        version: 0.7.9
       three:
         specifier: ^0.179.1
         version: 0.179.1
     devDependencies:
+      '@types/dat.gui':
+        specifier: ^0.7.13
+        version: 0.7.13
       '@types/three':
         specifier: ^0.179.0
         version: 0.179.0
@@ -298,6 +304,9 @@ packages:
   '@tweenjs/tween.js@23.1.3':
     resolution: {integrity: sha512-vJmvvwFxYuGnF2axRtPYocag6Clbb5YS7kLL+SO/TeVFzHqDIWrNKYtcsPMibjDx9O+bu+psAy9NKfWklassUA==}
 
+  '@types/dat.gui@0.7.13':
+    resolution: {integrity: sha512-LmG4Pr0mbsB/1WVttf8xaHx45BvSBDGY5D9+0/9AZCbI4vvOguwBHZdKyJMxt5Yst8+icRSHKmr7ClV2u5ZtDA==}
+
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
@@ -312,6 +321,9 @@ packages:
 
   '@webgpu/types@0.1.64':
     resolution: {integrity: sha512-84kRIAGV46LJTlJZWxShiOrNL30A+9KokD7RB3dRCIqODFjodS5tCD5yyiZ8kIReGVZSDfA3XkkwyyOIF6K62A==}
+
+  dat.gui@0.7.9:
+    resolution: {integrity: sha512-sCNc1OHobc+Erc1HqiswYgHdVNpSJUlk/Hz8vzOCsER7rl+oF/4+v8GXFUyCgtXpoCX6+bnmg07DedLvBLwYKQ==}
 
   esbuild@0.25.9:
     resolution: {integrity: sha512-CRbODhYyQx3qp7ZEwzxOk4JBqmD/seJrzPa/cGjY1VtIn5E09Oi9/dB4JwctnfZ8Q8iT7rioVv5k/FNT/uf54g==}
@@ -575,6 +587,8 @@ snapshots:
 
   '@tweenjs/tween.js@23.1.3': {}
 
+  '@types/dat.gui@0.7.13': {}
+
   '@types/estree@1.0.8': {}
 
   '@types/stats.js@0.17.4': {}
@@ -592,6 +606,8 @@ snapshots:
   '@types/webxr@0.5.22': {}
 
   '@webgpu/types@0.1.64': {}
+
+  dat.gui@0.7.9: {}
 
   esbuild@0.25.9:
     optionalDependencies:
