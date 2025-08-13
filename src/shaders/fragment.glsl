@@ -23,7 +23,7 @@ uniform float uClickTimes[MAX_CLICKS];
 // Constants
 const float CELL_PIXEL_SIZE = 8.0;
 
-// Bayer matrix helpers - Enhanced with more patterns
+// Bayer matrix helpers 
 float Bayer2(vec2 a) {
     a = floor(a);
     return fract(a.x / 2.0 + a.y * a.y * 0.75);
@@ -40,7 +40,7 @@ float blueNoise(vec2 coord) {
                 sin(dot(p, vec2(269.5, 183.3))) * 43758.5453123);
 }
 
-// Enhanced wave function with better physics
+// Wave function Physics wala
 float calculateWave(vec2 pos, vec2 center, float time, float waveSpeed, float thickness) {
     float dist = distance(pos, center);
     float waveRadius = waveSpeed * time;
@@ -55,7 +55,7 @@ float calculateWave(vec2 pos, vec2 center, float time, float waveSpeed, float th
     return wave;
 }
 
-// Animated background gradient
+// Background gradient
 vec3 getAnimatedBackground(vec2 uv) {
     if (!uAnimatedBackground) {
         return uBackgroundColor;
@@ -71,7 +71,7 @@ void main() {
     float pixelSize = uPixelSize;
     vec2 fragCoord = gl_FragCoord.xy - uResolution * 0.5;
     
-    // Enhanced aspect ratio handling
+    // aspect ratio handling
     float aspectRatio = uResolution.x / uResolution.y;
     vec2 pixelId = floor(fragCoord / pixelSize);
     
@@ -84,7 +84,7 @@ void main() {
     float totalWave = 0.0;
     float maxIntensity = 0.0;
     
-    // Enhanced ripple processing
+    // ripple processing
     for (int i = 0; i < MAX_CLICKS; ++i) {
         vec2 pos = uClickPos[i];
         if(pos.x < 0.0 && pos.y < 0.0) continue;
@@ -93,7 +93,7 @@ void main() {
         float timeSinceClick = max(uTime - uClickTimes[i], 0.0);
         float dist = distance(uv, cuv);
         
-        // Enhanced wave calculation
+        // wave calculation
         float wave = calculateWave(uv, cuv, timeSinceClick, uWaveSpeed, uWaveThickness);
         
         // Improved attenuation
@@ -121,7 +121,7 @@ void main() {
     
     ditherValue -= 0.5;
     
-    // Enhanced color mixing
+    // color mixing
     float thresholdValue = totalWave + ditherValue;
     float rippleStrength = smoothstep(0.3, 0.7, thresholdValue);
     
